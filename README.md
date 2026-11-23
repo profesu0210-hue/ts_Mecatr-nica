@@ -1,4 +1,4 @@
-# ts_Mecatónica
+# ts_Mecatrónica
 pagina para información a ingresantes a la Carrera tecnicatura en Mecatrónica
 # contenido 
 informacion general de la carrera
