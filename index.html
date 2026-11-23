@@ -4,25 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tecnicatura Superior en Mecatrónica | ISFT "Islas Malvinas"</title>
-  <!-- Tipografías modernas -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-  <!-- Íconos vectoriales profesionales (Lucide Icons) -->
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     :root {
-      --bg-dark: #0b1120;
-      --bg-card: #131c31;
-      --bg-light: #f8fafc;
-      --primary: #0ea5e9;
-      --primary-hover: #0284c7;
+      --bg-page: #f4f7fb;
+      --bg-surface: #ffffff;
+      --bg-soft-blue: #e0f2fe;
+      --primary: #0284c7;
+      --primary-bright: #0ea5e9;
+      --primary-dark: #0369a1;
       --accent: #10b981;
       --accent-hover: #059669;
       --text-main: #0f172a;
       --text-muted: #475569;
-      --text-light: #f1f5f9;
-      --border-subtle: rgba(255, 255, 255, 0.1);
+      --border-light: #e2e8f0;
     }
 
     * {
@@ -35,57 +33,56 @@
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
-      background-color: var(--bg-light);
-      line-height: 1.6;
+      background-color: var(--bg-page);
+      line-height: 1.55;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       font-family: 'Space Grotesk', sans-serif;
       line-height: 1.2;
     }
 
-    /* Barra de navegación superior */
+    /* Barra superior compacta */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(11, 17, 32, 0.95);
+      background: rgba(255, 255, 255, 0.94);
       backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--border-subtle);
-      padding: 0.85rem 1.5rem;
+      border-bottom: 1px solid var(--border-light);
+      padding: 0.5rem 1.25rem;
     }
 
     .nav-container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
       gap: 0.75rem;
     }
 
     .nav-brand {
-      color: #fff;
+      color: var(--primary-dark);
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.92rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.45rem;
       text-decoration: none;
     }
 
     .nav-links {
       display: flex;
-      gap: 1.25rem;
+      gap: 1.1rem;
       align-items: center;
     }
 
     .nav-links a {
-      color: #cbd5e1;
+      color: var(--text-muted);
       text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.85rem;
+      font-weight: 600;
       transition: color 0.2s;
     }
 
@@ -95,80 +92,82 @@
 
     .nav-cta {
       background: var(--primary);
-      color: #fff !important;
-      padding: 0.45rem 0.9rem;
-      border-radius: 6px;
-      font-weight: 600 !important;
+      color: #ffffff !important;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.82rem !important;
     }
 
     .nav-cta:hover {
-      background: var(--primary-hover);
+      background: var(--primary-dark);
     }
 
-    /* Hero / Portada */
+    /* Hero luminoso y juvenil */
     header.hero {
-      background: radial-gradient(circle at top right, #1e293b 0%, var(--bg-dark) 70%);
-      color: var(--text-light);
-      padding: 4.5rem 1.5rem 5rem;
+      background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 55%, #38bdf8 100%);
+      color: #ffffff;
+      padding: 3.25rem 1.5rem 3.75rem;
       text-align: center;
-      border-bottom: 4px solid var(--primary);
+      position: relative;
+      overflow: hidden;
     }
 
     .container {
-      max-width: 1060px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
     .badge-inst {
       display: inline-block;
-      background: rgba(14, 165, 233, 0.15);
-      border: 1px solid rgba(14, 165, 233, 0.4);
-      color: #7dd3fc;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      color: #ffffff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      padding: 0.4rem 1rem;
+      padding: 0.35rem 0.95rem;
       border-radius: 999px;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     header.hero h1 {
-      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      font-size: clamp(2rem, 4.8vw, 3.2rem);
       font-weight: 700;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
       color: #ffffff;
     }
 
     .hero-subtitle {
-      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-      color: #38bdf8;
+      font-size: clamp(1.1rem, 2.3vw, 1.35rem);
+      color: #e0f2fe;
       font-weight: 600;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .hero-desc {
-      max-width: 680px;
-      margin: 0 auto 2rem;
-      color: #cbd5e1;
-      font-size: 1.05rem;
+      max-width: 660px;
+      margin: 0 auto 1.65rem;
+      color: #f0f9ff;
+      font-size: 1.02rem;
     }
 
     .hero-pills {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 0.65rem;
-      margin-bottom: 2.25rem;
+      gap: 0.6rem;
+      margin-bottom: 1.85rem;
     }
 
     .pill {
-      background: rgba(255, 255, 255, 0.07);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.35);
       padding: 0.35rem 0.85rem;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      color: #e2e8f0;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #ffffff;
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
@@ -177,164 +176,165 @@
     .btn-primary {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.55rem;
+      background: #ffffff;
+      color: var(--primary-dark);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.98rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      box-shadow: 0 10px 25px -5px rgba(3, 105, 161, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px -5px rgba(3, 105, 161, 0.45);
+    }
+
+    .btn-green {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
       background: var(--accent);
       color: #ffffff;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
-      padding: 0.95rem 1.85rem;
-      border-radius: 10px;
-      box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+      font-size: 0.98rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.4);
       transition: transform 0.2s, background 0.2s;
     }
 
-    .btn-primary:hover {
+    .btn-green:hover {
       background: var(--accent-hover);
       transform: translateY(-2px);
     }
 
-    /* Secciones generales */
+    /* Secciones */
     section {
-      padding: 4.5rem 1.5rem;
+      padding: 3.75rem 1.5rem;
     }
 
     .section-header {
       text-align: center;
-      max-width: 720px;
-      margin: 0 auto 3rem;
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
     }
 
     .section-header h2 {
-      font-size: clamp(1.75rem, 3.5vw, 2.35rem);
-      margin-bottom: 0.75rem;
+      font-size: clamp(1.65rem, 3.2vw, 2.2rem);
+      margin-bottom: 0.6rem;
       color: var(--text-main);
     }
 
     .section-header p {
       color: var(--text-muted);
-      font-size: 1.05rem;
+      font-size: 1rem;
     }
 
-    /* Grillas de tarjetas */
+    /* Grillas y tarjetas */
     .grid-4 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .grid-3 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
+      gap: 1.25rem;
     }
 
     .card {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 1.75rem;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04);
-      transition: transform 0.2s, box-shadow 0.2s;
+      background: var(--bg-surface);
+      border-radius: 16px;
+      padding: 1.5rem;
+      border: 1px solid var(--border-light);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 20px -8px rgba(15, 23, 42, 0.1);
+      transform: translateY(-3px);
+      border-color: #7dd3fc;
+      box-shadow: 0 12px 24px -8px rgba(2, 132, 199, 0.15);
     }
 
     .icon-box {
-      width: 48px;
-      height: 48px;
+      width: 44px;
+      height: 44px;
       border-radius: 12px;
-      background: rgba(14, 165, 233, 0.1);
+      background: var(--bg-soft-blue);
       color: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.15rem;
+      margin-bottom: 1rem;
     }
 
     .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.15rem;
+      margin-bottom: 0.45rem;
       color: var(--text-main);
     }
 
     .card p {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
-    /* Sección Oscura: ADN Mecatrónico */
-    .section-dark {
-      background: var(--bg-dark);
-      color: var(--text-light);
+    /* Sección Celeste Suave: ADN Mecatrónico */
+    .section-tint {
+      background: #eaf4fc;
+      border-top: 1px solid #d0e7fa;
+      border-bottom: 1px solid #d0e7fa;
     }
 
-    .section-dark .section-header h2 {
-      color: #ffffff;
-    }
-
-    .section-dark .section-header p {
-      color: #94a3b8;
-    }
-
-    .card-dark {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-light);
-    }
-
-    .card-dark h3 {
-      color: #ffffff;
-    }
-
-    .card-dark p {
-      color: #cbd5e1;
-    }
-
-    /* Sección Sede y Beneficios */
+    /* Sede y Beneficios */
     .sede-box {
       background: #ffffff;
       border-radius: 18px;
-      border: 1px solid #e2e8f0;
-      padding: 2.5rem;
+      border: 1px solid var(--border-light);
+      padding: 2.25rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
       align-items: center;
-      box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.06);
     }
 
     .sede-info h3 {
-      font-size: 1.65rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary-hover);
+      font-size: 1.55rem;
+      margin-bottom: 0.4rem;
+      color: var(--primary-dark);
     }
 
     .sede-address {
       display: inline-flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 0.4rem;
       font-weight: 600;
       color: var(--text-main);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .check-list {
       list-style: none;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 0.85rem;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.8rem;
     }
 
     .check-list li {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      font-weight: 500;
-      font-size: 0.95rem;
+      gap: 0.55rem;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--text-main);
     }
 
     .check-list i {
@@ -342,145 +342,180 @@
       flex-shrink: 0;
     }
 
-    /* Sección Inscripción y Cronograma SIMA */
+    /* Inscripción y QR lado a lado en PC */
     .inscripcion-wrapper {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      color: #ffffff;
-      border-radius: 20px;
-      padding: 3rem 2rem;
-      text-align: center;
+      background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
+      border: 2px solid #bae6fd;
+      border-radius: 22px;
+      padding: 2.25rem;
+      box-shadow: 0 12px 30px -10px rgba(2, 132, 199, 0.15);
     }
 
-    .inscripcion-wrapper h2 {
-      font-size: clamp(1.75rem, 3.5vw, 2.3rem);
-      margin-bottom: 0.75rem;
+    .inscripcion-layout {
+      display: grid;
+      grid-template-columns: 1fr 250px;
+      gap: 2rem;
+      align-items: center;
     }
 
-    .inscripcion-wrapper > p {
-      color: #cbd5e1;
-      max-width: 650px;
-      margin: 0 auto 2rem;
+    .inscripcion-main h2 {
+      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .inscripcion-main > p {
+      color: var(--text-muted);
+      margin-bottom: 1.35rem;
+      font-size: 0.96rem;
     }
 
     .steps-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.25rem;
-      text-align: left;
-      margin-bottom: 2.25rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin-bottom: 1.25rem;
     }
 
     .step-card {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
       border-radius: 12px;
-      padding: 1.35rem;
+      padding: 1rem;
     }
 
     .step-badge {
       display: inline-block;
-      background: var(--primary);
-      color: #fff;
-      font-size: 0.75rem;
+      background: var(--bg-soft-blue);
+      color: var(--primary-dark);
+      font-size: 0.72rem;
       font-weight: 700;
-      padding: 0.2rem 0.6rem;
+      padding: 0.2rem 0.55rem;
       border-radius: 6px;
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.45rem;
       text-transform: uppercase;
     }
 
     .step-card h4 {
-      font-size: 1.05rem;
-      margin-bottom: 0.35rem;
-      color: #fff;
+      font-size: 0.98rem;
+      margin-bottom: 0.25rem;
+      color: var(--text-main);
     }
 
     .step-card p {
-      font-size: 0.88rem;
-      color: #cbd5e1;
+      font-size: 0.83rem;
+      color: var(--text-muted);
     }
 
     .alert-note {
-      background: rgba(245, 158, 11, 0.15);
-      border: 1px solid rgba(245, 158, 11, 0.4);
-      color: #fde68a;
-      padding: 0.9rem 1.2rem;
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+      color: #92400e;
+      padding: 0.75rem 1rem;
       border-radius: 10px;
-      font-size: 0.9rem;
-      max-width: 720px;
-      margin: 0 auto 2rem;
+      font-size: 0.85rem;
+      margin-bottom: 1.35rem;
     }
 
-    /* Sección QR */
-    .qr-section {
-      margin-top: 3rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    /* Tarjeta QR visible de inmediato en PC */
+    .qr-panel {
+      background: #ffffff;
+      border: 1px solid #bae6fd;
+      border-radius: 16px;
+      padding: 1.25rem;
+      text-align: center;
+      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.08);
+    }
+
+    .qr-panel h3 {
+      font-size: 1rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .qr-panel p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
     }
 
     .qr-box {
       background: #ffffff;
-      padding: 1rem;
-      border-radius: 14px;
-      margin: 1.25rem 0 0.75rem;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      padding: 0.5rem;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      display: inline-block;
+      margin-bottom: 0.5rem;
     }
 
     .qr-box img {
       display: block;
-      width: 170px;
-      height: 170px;
+      width: 155px;
+      height: 155px;
+    }
+
+    .qr-url {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      word-break: break-all;
     }
 
     /* Footer */
     footer {
-      background: #070b14;
-      color: #94a3b8;
+      background: #0f172a;
+      color: #cbd5e1;
       text-align: center;
-      padding: 3rem 1.5rem;
-      font-size: 0.92rem;
+      padding: 2.5rem 1.5rem;
+      font-size: 0.9rem;
     }
 
     footer strong {
       color: #ffffff;
       display: block;
-      font-size: 1.15rem;
-      margin-bottom: 0.4rem;
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    @media (max-width: 900px) {
+      .inscripcion-layout {
+        grid-template-columns: 1fr;
+      }
+      .steps-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 640px) {
       .nav-links {
         display: none;
       }
-      .sede-box {
-        padding: 1.5rem;
+      .sede-box, .inscripcion-wrapper {
+        padding: 1.4rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navegación -->
+  <!-- Barra superior compacta -->
   <nav>
     <div class="nav-container">
       <a href="#" class="nav-brand">
-        <i data-lucide="cpu"></i>
+        <i data-lucide="cpu" size="18"></i>
         <span>Mecatrónica · ISFT Islas Malvinas</span>
       </a>
       <div class="nav-links">
         <a href="#que-es">La Carrera</a>
         <a href="#adn">Formación</a>
-        <a href="#sede">Dónde Estudiar</a>
+        <a href="#sede">Sede</a>
         <a href="#campo-laboral">Salida Laboral</a>
-        <a href="#inscripcion" class="nav-cta">Inscribirme</a>
+        <a href="#inscripcion" class="nav-cta">Inscribirme y QR</a>
       </div>
     </div>
   </nav>
 
-  <!-- Portada / Hero -->
+  <!-- Portada luminosa -->
   <header class="hero">
     <div class="container">
       <div class="badge-inst">Instituto Superior de Formación Técnica "Islas Malvinas"</div>
@@ -490,12 +525,12 @@
         Convertite en el cerebro detrás de las máquinas. Aprendé mecánica, electrónica, programación y automatización industrial para diseñar la tecnología que transforma el mundo.
       </p>
       <div class="hero-pills">
-        <span class="pill"><i data-lucide="clock" size="16"></i> Duración: 3 años</span>
-        <span class="pill"><i data-lucide="award" size="16"></i> Título Oficial y Gratuito</span>
-        <span class="pill"><i data-lucide="moon" size="16"></i> Turno Nocturno</span>
+        <span class="pill"><i data-lucide="clock" size="15"></i> Duración: 3 años</span>
+        <span class="pill"><i data-lucide="award" size="15"></i> Título Oficial y Gratuito</span>
+        <span class="pill"><i data-lucide="moon" size="15"></i> Turno Nocturno</span>
       </div>
       <a href="#inscripcion" class="btn-primary">
-        <i data-lucide="check-circle"></i>
+        <i data-lucide="check-circle" size="18"></i>
         QUIERO INSCRIBIRME
       </a>
     </div>
@@ -536,29 +571,29 @@
   </section>
 
   <!-- ADN Mecatrónico -->
-  <section id="adn" class="section-dark">
+  <section id="adn" class="section-tint">
     <div class="container">
       <div class="section-header">
         <h2>El ADN Mecatrónico</h2>
         <p>Una formación integral pensada para que entiendas cada parte de un sistema automatizado desde cero.</p>
       </div>
       <div class="grid-4">
-        <div class="card card-dark">
+        <div class="card">
           <div class="icon-box"><i data-lucide="wrench"></i></div>
           <h3>El cuerpo</h3>
           <p>La estructura física y mecánica que permite operar máquinas y dispositivos.</p>
         </div>
-        <div class="card card-dark">
+        <div class="card">
           <div class="icon-box"><i data-lucide="activity"></i></div>
           <h3>Los nervios</h3>
           <p>La electrónica y los sensores que perciben el entorno y transmiten señales.</p>
         </div>
-        <div class="card card-dark">
+        <div class="card">
           <div class="icon-box"><i data-lucide="cpu"></i></div>
           <h3>El cerebro</h3>
           <p>Los algoritmos, controladores y sistemas que procesan datos y toman decisiones.</p>
         </div>
-        <div class="card card-dark">
+        <div class="card">
           <div class="icon-box"><i data-lucide="rocket"></i></div>
           <h3>La experiencia real</h3>
           <p>Prácticas profesionalizantes y proyectos tecnológicos aplicados a situaciones concretas.</p>
@@ -578,13 +613,13 @@
         <div class="sede-info">
           <h3>ISFT "Islas Malvinas"</h3>
           <div class="sede-address">
-            <i data-lucide="map-pin" color="#0ea5e9"></i>
+            <i data-lucide="map-pin" color="#0284c7"></i>
             <span>Neuquén 1470 · Ciudad de Corrientes</span>
           </div>
-          <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+          <p style="color: var(--text-muted); margin-bottom: 1.25rem; font-size: 0.95rem;">
             Contamos con talleres, equipamiento técnico y docentes especialistas para acompañarte en cada etapa de tu carrera.
           </p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Neuquen+1470+Corrientes+Capital" target="_blank" rel="noopener" style="color: var(--primary-hover); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+          <a href="https://www.google.com/maps/search/?api=1&query=Neuquen+1470+Corrientes+Capital" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem;">
             <i data-lucide="external-link" size="16"></i> Ver ubicación en Google Maps
           </a>
         </div>
@@ -603,7 +638,7 @@
   </section>
 
   <!-- Campo Laboral -->
-  <section id="campo-laboral" style="background-color: #f1f5f9;">
+  <section id="campo-laboral" class="section-tint">
     <div class="container">
       <div class="section-header">
         <h2>Tu futuro profesional</h2>
@@ -644,50 +679,54 @@
     </div>
   </section>
 
-  <!-- Inscripción y QR -->
+  <!-- Inscripción y QR lado a lado en PC -->
   <section id="inscripcion">
     <div class="container">
       <div class="inscripcion-wrapper">
-        <h2>Inscripción Ciclo Lectivo 2027</h2>
-        <p>
-          Ingresá al sistema SIMA Educativo, buscá <strong>ISFT "Islas Malvinas"</strong> en Corrientes Capital y seleccioná la <strong>Tecnicatura Superior en Mecatrónica</strong>.
-        </p>
+        <div class="inscripcion-layout">
+          <div class="inscripcion-main">
+            <h2>Inscripción Ciclo Lectivo 2027</h2>
+            <p>
+              Ingresá al sistema SIMA Educativo, buscá <strong>ISFT "Islas Malvinas"</strong> en Corrientes Capital y seleccioná la <strong>Tecnicatura Superior en Mecatrónica</strong>.
+            </p>
 
-        <div class="steps-grid">
-          <div class="step-card">
-            <span class="step-badge">Etapa 1 · 20/11 al 14/12/2026</span>
-            <h4>Preinscripción Online</h4>
-            <p>Completá tus datos en SIMA Educativo y confirmá el enlace que llega a tu correo electrónico.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-badge">Etapa 2 · 15 al 22/12/2026</span>
-            <h4>Entrega de Legajo</h4>
-            <p>Presentá tu carpeta completa en Neuquén 1470 (turno noche) para confirmar tu vacante.</p>
-          </div>
-          <div class="step-card">
-            <span class="step-badge">Etapa 3 · 11 al 19/02/2027</span>
-            <h4>Documentación Final</h4>
-            <p>Presentación de título secundario (o constancia en trámite) y acta de evaluación psicológica.</p>
-          </div>
-        </div>
+            <div class="steps-grid">
+              <div class="step-card">
+                <span class="step-badge">Etapa 1 · 20/11 al 14/12/2026</span>
+                <h4>Preinscripción Online</h4>
+                <p>Completá tus datos en SIMA Educativo y confirmá el enlace que llega a tu correo.</p>
+              </div>
+              <div class="step-card">
+                <span class="step-badge">Etapa 2 · 15 al 22/12/2026</span>
+                <h4>Entrega de Legajo</h4>
+                <p>Presentá tu carpeta completa en Neuquén 1470 (turno noche) para confirmar tu banco.</p>
+              </div>
+              <div class="step-card">
+                <span class="step-badge">Etapa 3 · 11 al 19/02/2027</span>
+                <h4>Documentación Final</h4>
+                <p>Presentación de título secundario (o constancia) y acta de evaluación psicológica.</p>
+              </div>
+            </div>
 
-        <div class="alert-note">
-          <strong>Importante:</strong> No hay sorteo. La preinscripción online no reserva el banco hasta que entregás el legajo completo en el instituto, por orden de llegada y hasta cubrir el cupo.
-        </div>
+            <div class="alert-note">
+              <strong>Importante:</strong> No hay sorteo. La preinscripción online no reserva el banco hasta que entregás el legajo completo en el instituto, por orden de llegada y hasta cubrir el cupo.
+            </div>
 
-        <a href="https://simaeducativa.mec.gob.ar/preingresantes" target="_blank" rel="noopener" class="btn-primary">
-          <i data-lucide="external-link"></i>
-          PREINSCRIBIRME EN SIMA AHORA
-        </a>
-
-        <!-- Código QR generado automáticamente -->
-        <div class="qr-section">
-          <h3>Escaneá y compartí esta información</h3>
-          <p style="color: #94a3b8; font-size: 0.9rem;">Apuntá con la cámara de tu celular para abrir esta página al instante</p>
-          <div class="qr-box">
-            <img id="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://profesu0210-hue.github.io/ts_Mecatr-nica/" alt="Código QR Tecnicatura Superior en Mecatrónica" />
+            <a href="https://simaeducativa.mec.gob.ar/preingresantes" target="_blank" rel="noopener" class="btn-green">
+              <i data-lucide="external-link" size="18"></i>
+              PREINSCRIBIRME EN SIMA AHORA
+            </a>
           </div>
-          <span style="font-size: 0.8rem; color: #94a3b8;">profesu0210-hue.github.io/ts_Mecatr-nica</span>
+
+          <!-- Columna lateral con QR visible en PC -->
+          <div class="qr-panel">
+            <h3>Compartí por QR</h3>
+            <p>Escaneá con la cámara de tu celular</p>
+            <div class="qr-box">
+              <img id="qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://profesu0210-hue.github.io/ts_Mecatr-nica/" alt="Código QR Tecnicatura Superior en Mecatrónica" />
+            </div>
+            <span class="qr-url">profesu0210-hue.github.io/ts_Mecatr-nica</span>
+          </div>
         </div>
       </div>
     </div>
@@ -698,7 +737,7 @@
     <div class="container">
       <strong>EL FUTURO ES HOY</strong>
       <p>Diseñá, programá y automatizá la tecnología que transforma el mundo.</p>
-      <p style="margin-top: 0.5rem;">Tecnicatura Superior en Mecatrónica · ISFT "Islas Malvinas" · Neuquén 1470, Corrientes Capital</p>
+      <p style="margin-top: 0.4rem; opacity: 0.8;">Tecnicatura Superior en Mecatrónica · ISFT "Islas Malvinas" · Neuquén 1470, Corrientes Capital</p>
     </div>
   </footer>
 
