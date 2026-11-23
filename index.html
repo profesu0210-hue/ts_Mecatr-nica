@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tecnicatura Superior en Mecatrónica | El Futuro es Hoy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<style>
+
+:root{
+    --azul:#0f172a;
+    --azul2:#1e3a8a;
+    --cian:#06b6d4;
+    --cian-hover:#0891b2;
+    --gris:#f5f7fa;
+    --blanco:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+    background:var(--gris);
+    color:#333;
+    line-height:1.6;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(15,23,42,.80),
+    rgba(30,58,138,.80)),
+    url('img/portada.jpg');
+    background-size:cover;
+    background-position:center;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero small{
+    letter-spacing:3px;
+    text-transform:uppercase;
+    color:#7dd3fc;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin:20px 0;
+}
+
+.hero h2{
+    color:#67e8f9;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 32px;
+    background:var(--cian);
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:bold;
+    transition:all .3s ease;
+}
+
+.btn:hover{
+    background:var(--cian-hover);
+    transform:translateY(-3px);
+}
+
+/* SECCIONES */
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.titulo{
+    text-align:center;
+    font-size:2.4rem;
+    color:var(--azul2);
+    margin-bottom:20px;
+}
+
+.subtitulo{
+    text-align:center;
+    max-width:800px;
+    margin:auto auto 50px auto;
+    color:#555;
+}
+
+/* TARJETAS */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card span{
+    font-size:3rem;
+}
+
+.card h3{
+    margin:15px 0;
+    color:var(--azul2);
+}
+
+/* ADN */
+
+.adn{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.adn-item{
+    background:white;
+    border-left:6px solid var(--cian);
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.adn-item h3{
+    color:var(--azul2);
+    margin-bottom:10px;
+}
+
+/* DESTACADO */
+
+.destacado{
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.destacado ul{
+    list-style:none;
+    margin-top:20px;
+}
+
+.destacado li{
+    padding:8px;
+    font-size:1.1rem;
+}
+
+/* CTA */
+
+.cta{
+    background:
+    linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    border-radius:30px;
+    text-align:center;
+    padding:80px 30px;
+}
+
+.cta h2{
+    font-size:2.7rem;
+    margin-bottom:25px;
+}
+
+.cta p{
+    font-size:1.25rem;
+    max-width:800px;
+    margin:auto;
+}
+
+.cta .btn{
+    margin-top:40px;
+    font-size:1.2rem;
+}
+
+/* INSCRIPCION */
+
+.inscripcion{
+    text-align:center;
+}
+
+.inscripcion p{
+    max-width:800px;
+    margin:0 auto 30px auto;
+}
+
+/* QR */
+
+.qr{
+    background:white;
+    text-align:center;
+    border-radius:25px;
+    padding:50px 25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.qr-box{
+    width:220px;
+    height:220px;
+    margin:30px auto;
+    border:3px dashed var(--cian);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:15px;
+    color:#777;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--azul);
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+    margin-top:50px;
+}
+
+footer h3{
+    color:#67e8f9;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:8px 0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.4rem;
+    }
+
+    .hero h2{
+        font-size:1.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .titulo{
+        font-size:2rem;
+    }
+
+    .cta h2{
+        font-size:2rem;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<header class="hero">
+
+<div class="hero-content">
+
+<small>Instituto Superior de Formación Técnica</small>
+
+<h1>⚙️ Tecnicatura Superior en Mecatrónica</h1>
+
+<h2>🚀 El futuro es hoy</h2>
+
+<p>
+Convertite en el cerebro detrás de las máquinas.
+Aprendé mecánica, electrónica, programación y automatización
+para diseñar la tecnología que transforma el mundo.
+</p>
+
+<a class="btn"
+href="https://simaeducativa.mec.gob.ar/preingresantes/"
+target="_blank">
+✅ QUIERO INSCRIBIRME
+</a>
+
+</div>
+
+</header>
+
+<!-- MECATRONICA -->
+
+<section>
+
+<h2 class="titulo">¿Qué es la Mecatrónica?</h2>
+
+<p class="subtitulo">
+La Mecatrónica integra conocimientos de mecánica, electrónica,
+informática y automatización para desarrollar sistemas inteligentes
+capaces de mejorar procesos productivos y tecnológicos.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<span>⚙️</span>
+<h3>Mecánica</h3>
+<p>Diseño y funcionamiento de sistemas mecánicos.</p>
+</div>
+
+<div class="card">
+<span>⚡</span>
+<h3>Electrónica</h3>
+<p>Sensores, actuadores y circuitos de control.</p>
+</div>
+
+<div class="card">
+<span>💻</span>
+<h3>Programación</h3>
+<p>Desarrollo de software y control industrial.</p>
+</div>
+
+<div class="card">
+<span>🤖</span>
+<h3>Automatización</h3>
+<p>Integración inteligente de tecnologías.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ADN -->
+
+<section>
+
+<h2 class="titulo">🧬 El ADN Mecatrónico</h2>
+
+<div class="adn">
+
+<div class="adn-item">
+<h3>🏗️ El cuerpo</h3>
+<p>La estructura mecánica que permite operar máquinas y dispositivos.</p>
+</div>
+
+<div class="adn-item">
+<h3>🔌 Los nervios</h3>
+<p>La electrónica y los sensores que perciben y transmiten información.</p>
+</div>
+
+<div class="adn-item">
+<h3>🧠 El cerebro</h3>
+<p>Los programas y sistemas de control que toman decisiones.</p>
+</div>
+
+<div class="adn-item">
+<h3>🚀 La experiencia real</h3>
+<p>Proyectos tecnológicos aplicados a situaciones concretas.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- INSTITUTO -->
+
+<section>
+
+<h2 class="titulo">📍 Estudiá en Corrientes Capital</h2>
+
+<div class="destacado">
+
+<h3>ISFT "Islas Malvinas"</h3>
+
+<p>Neuquén 1470 - Corrientes Capital</p>
+
+<ul>
+<li>✅ Carrera gratuita</li>
+<li>✅ Título oficial</li>
+<li>✅ Turno nocturno</li>
+<li>✅ Modalidad combinada</li>
+<li>✅ Compatible con el trabajo</li>
+<li>✅ Formación tecnológica actual</li>
+</ul>
+
+</div>
+
+</section>
+
+<!-- SALIDAS -->
+
+<section>
+
+<h2 class="titulo">🌎 Tu futuro profesional</h2>
+
+<div class="grid">
+
+<div class="card">
+🏭
+<h3>Industria 4.0</h3>
+</div>
+
+<div class="card">
+🤖
+<h3>Robótica</h3>
+</div>
+
+<div class="card">
+🏠
+<h3>Domótica</h3>
+</div>
+
+<div class="card">
+⚙️
+<h3>Automatización Industrial</h3>
+</div>
+
+<div class="card">
+📡
+<h3>Sistemas Inteligentes</h3>
+</div>
+
+<div class="card">
+🚀
+<h3>Emprendimientos Tecnológicos</h3>
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA PRINCIPAL -->
+
+<section>
+
+<div class="cta">
+
+<h2>¿Te imaginás diseñando robots, automatizando industrias o creando tecnología inteligente?</h2>
+
+<p>
+Tu futuro profesional puede comenzar con una decisión que tomes hoy.
+Formate para participar en la transformación tecnológica que el mundo necesita.
+</p>
+
+<a class="btn"
+href="https://simaeducativa.mec.gob.ar/preingresantes/"
+target="_blank">
+✅ INSCRIBITE HOY
+</a>
+
+</div>
+
+</section>
+
+<!-- INSCRIPCION -->
+
+<section class="inscripcion">
+
+<h2 class="titulo">📝 Inscripción</h2>
+
+<p>
+Ingresá al sistema SIMA, seleccioná la Provincia de Corrientes,
+el ISFT "Islas Malvinas" y la Tecnicatura Superior en Mecatrónica.
+</p>
+
+<a class="btn"
+href="https://simaeducativa.mec.gob.ar/preingresantes/"
+target="_blank">
+🚀 PREINSCRIBIRME AHORA
+</a>
+
+</section>
+
+<!-- QR -->
+
+<section>
+
+<div class="qr">
+
+<h2>📱 Escaneá y llevate toda la información en tu celular</h2>
+
+<div class="qr-box">
+AQUÍ IRÁ TU QR
+</div>
+
+<p>
+Una vez publicada la página en GitHub Pages,
+reemplazaremos este espacio por el código QR definitivo.
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>🚀 EL FUTURO ES HOY</h3>
+
+<p>
+Diseñá, programá y automatizá la tecnología que transforma el mundo.
+</p>
+
+<p>
+Tecnicatura Superior en Mecatrónica
+</p>
+
+<p>
+ISFT "Islas Malvinas" · Corrientes Capital
+</p>
+
+</footer>
+
+</body>
+</html>
