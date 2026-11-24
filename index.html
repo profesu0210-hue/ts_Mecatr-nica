@@ -42,15 +42,15 @@
       line-height: 1.2;
     }
 
-    /* Barra superior compacta */
+    /* Barra superior compacta con acentos de color por ítem */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(255, 255, 255, 0.94);
+      background: rgba(255, 255, 255, 0.96);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid var(--border-light);
-      padding: 0.5rem 1.25rem;
+      padding: 0.55rem 1.25rem;
     }
 
     .nav-container {
@@ -83,28 +83,32 @@
       text-decoration: none;
       font-size: 0.85rem;
       font-weight: 600;
-      transition: color 0.2s;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s;
     }
 
-    .nav-links a:hover {
-      color: var(--primary);
-    }
+    .nav-links a[href="#que-es"]:hover { color: #0284c7; border-bottom-color: #0284c7; }
+    .nav-links a[href="#adn"]:hover { color: #7c3aed; border-bottom-color: #7c3aed; }
+    .nav-links a[href="#sede"]:hover { color: #0891b2; border-bottom-color: #0891b2; }
+    .nav-links a[href="#campo-laboral"]:hover { color: #d97706; border-bottom-color: #d97706; }
 
     .nav-cta {
-      background: var(--primary);
+      background: var(--accent);
       color: #ffffff !important;
-      padding: 0.35rem 0.85rem;
+      padding: 0.4rem 0.95rem !important;
       border-radius: 999px;
       font-size: 0.82rem !important;
+      border-bottom: none !important;
     }
 
     .nav-cta:hover {
-      background: var(--primary-dark);
+      background: var(--accent-hover);
     }
 
     /* Hero luminoso y juvenil */
     header.hero {
-      background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 55%, #38bdf8 100%);
+      background: linear-gradient(135deg, #0f172a 0%, #0369a1 50%, #0ea5e9 100%);
       color: #ffffff;
       padding: 3.25rem 1.5rem 3.75rem;
       text-align: center;
@@ -119,8 +123,8 @@
 
     .badge-inst {
       display: inline-block;
-      background: rgba(255, 255, 255, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.45);
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       color: #ffffff;
       font-size: 0.78rem;
       font-weight: 700;
@@ -140,7 +144,7 @@
 
     .hero-subtitle {
       font-size: clamp(1.1rem, 2.3vw, 1.35rem);
-      color: #e0f2fe;
+      color: #bae6fd;
       font-weight: 600;
       margin-bottom: 1rem;
     }
@@ -161,8 +165,8 @@
     }
 
     .pill {
-      background: rgba(255, 255, 255, 0.18);
-      border: 1px solid rgba(255, 255, 255, 0.35);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       padding: 0.35rem 0.85rem;
       border-radius: 999px;
       font-size: 0.84rem;
@@ -197,23 +201,23 @@
       display: inline-flex;
       align-items: center;
       gap: 0.55rem;
-      background: var(--accent);
+      background: #16a34a;
       color: #ffffff;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.98rem;
-      padding: 0.85rem 1.75rem;
+      padding: 0.9rem 1.85rem;
       border-radius: 999px;
-      box-shadow: 0 8px 20px -4px rgba(16, 185, 129, 0.4);
+      box-shadow: 0 8px 20px -4px rgba(22, 163, 74, 0.45);
       transition: transform 0.2s, background 0.2s;
     }
 
     .btn-green:hover {
-      background: var(--accent-hover);
+      background: #15803d;
       transform: translateY(-2px);
     }
 
-    /* Secciones */
+    /* Secciones generales */
     section {
       padding: 3.75rem 1.5rem;
     }
@@ -286,30 +290,92 @@
       font-size: 0.92rem;
     }
 
-    /* Sección Celeste Suave: ADN Mecatrónico */
-    .section-tint {
-      background: #eaf4fc;
-      border-top: 1px solid #d0e7fa;
-      border-bottom: 1px solid #d0e7fa;
+    /* --- COLORES PERSONALIZADOS POR SECCIÓN --- */
+
+    /* 1. La Carrera: Blanco puro con acentos azul eléctrico */
+    #que-es {
+      background: #ffffff;
+    }
+
+    /* 2. ADN Mecatrónico: Violeta / Índigo tecnológico suave */
+    #adn {
+      background: linear-gradient(180deg, #f5f3ff 0%, #ede9fe 100%);
+      border-top: 1px solid #ddd6fe;
+      border-bottom: 1px solid #ddd6fe;
+    }
+    #adn .section-header h2 {
+      color: #4c1d95;
+    }
+    #adn .icon-box {
+      background: #ede9fe;
+      color: #7c3aed;
+    }
+    #adn .card:hover {
+      border-color: #a78bfa;
+      box-shadow: 0 12px 24px -8px rgba(124, 58, 237, 0.18);
+    }
+
+    /* 3. Sede: Celeste hielo / Cian institucional */
+    #sede {
+      background: #ecfeff;
+      border-bottom: 1px solid #cffafe;
+    }
+    #sede .section-header h2 {
+      color: #164e63;
+    }
+
+    /* 4. Campo Laboral: Azul pizarra oscuro moderno con acentos ámbar/dorados */
+    #campo-laboral {
+      background: #0f172a;
+      color: #f8fafc;
+    }
+    #campo-laboral .section-header h2 {
+      color: #ffffff;
+    }
+    #campo-laboral .section-header p {
+      color: #94a3b8;
+    }
+    #campo-laboral .card {
+      background: #1e293b;
+      border-color: #334155;
+    }
+    #campo-laboral .card:hover {
+      border-color: #fbbf24;
+      box-shadow: 0 12px 24px -8px rgba(251, 191, 36, 0.2);
+    }
+    #campo-laboral .card h3 {
+      color: #f8fafc;
+    }
+    #campo-laboral .card p {
+      color: #cbd5e1;
+    }
+    #campo-laboral .icon-box {
+      background: rgba(245, 158, 11, 0.18);
+      color: #fbbf24;
+    }
+
+    /* 5. Inscripción: Verde menta suave que guía a la acción */
+    #inscripcion {
+      background: #ecfdf5;
     }
 
     /* Sede y Beneficios */
     .sede-box {
       background: #ffffff;
       border-radius: 18px;
-      border: 1px solid var(--border-light);
+      border: 1px solid #a5f3fc;
       padding: 2.25rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       align-items: center;
-      box-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.06);
+      box-shadow: 0 8px 24px -8px rgba(8, 145, 178, 0.1);
     }
 
     .sede-info h3 {
       font-size: 1.55rem;
       margin-bottom: 0.4rem;
-      color: var(--primary-dark);
+      color: #0e7490;
     }
 
     .sede-address {
@@ -338,17 +404,17 @@
     }
 
     .check-list i {
-      color: var(--accent);
+      color: #0891b2;
       flex-shrink: 0;
     }
 
     /* Inscripción y QR lado a lado en PC */
     .inscripcion-wrapper {
-      background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%);
-      border: 2px solid #bae6fd;
+      background: #ffffff;
+      border: 2px solid #a7f3d0;
       border-radius: 22px;
       padding: 2.25rem;
-      box-shadow: 0 12px 30px -10px rgba(2, 132, 199, 0.15);
+      box-shadow: 0 12px 30px -10px rgba(16, 185, 129, 0.18);
     }
 
     .inscripcion-layout {
@@ -360,14 +426,64 @@
 
     .inscripcion-main h2 {
       font-size: clamp(1.6rem, 3vw, 2.1rem);
-      color: var(--primary-dark);
+      color: #065f46;
       margin-bottom: 0.5rem;
     }
 
     .inscripcion-main > p {
       color: var(--text-muted);
-      margin-bottom: 1.35rem;
+      margin-bottom: 1.15rem;
       font-size: 0.96rem;
+    }
+
+    /* Caja de alerta con los 3 pasos para SIMA */
+    .sima-guide-box {
+      background-color: #fffbeb;
+      border-left: 5px solid #f59e0b;
+      border-top: 1px solid #fde68a;
+      border-right: 1px solid #fde68a;
+      border-bottom: 1px solid #fde68a;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 1.35rem;
+      border-radius: 12px;
+      color: #1f2937;
+    }
+
+    .sima-guide-box h4 {
+      color: #b45309;
+      font-size: 1.02rem;
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .sima-guide-box p {
+      font-size: 0.88rem;
+      color: #78350f;
+      margin-bottom: 0.65rem;
+    }
+
+    .sima-guide-box ol {
+      margin: 0;
+      padding-left: 1.35rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #1e293b;
+    }
+
+    .sima-guide-box li {
+      margin-bottom: 0.25rem;
+    }
+
+    .badge-btn-green {
+      background-color: #16a34a;
+      color: #ffffff;
+      padding: 2px 8px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 0.85em;
+      display: inline-block;
     }
 
     .steps-grid {
@@ -378,7 +494,7 @@
     }
 
     .step-card {
-      background: #ffffff;
+      background: #f8fafc;
       border: 1px solid #cbd5e1;
       border-radius: 12px;
       padding: 1rem;
@@ -386,8 +502,8 @@
 
     .step-badge {
       display: inline-block;
-      background: var(--bg-soft-blue);
-      color: var(--primary-dark);
+      background: #d1fae5;
+      color: #065f46;
       font-size: 0.72rem;
       font-weight: 700;
       padding: 0.2rem 0.55rem;
@@ -408,9 +524,9 @@
     }
 
     .alert-note {
-      background: #fef3c7;
-      border: 1px solid #fcd34d;
-      color: #92400e;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      color: #334155;
       padding: 0.75rem 1rem;
       border-radius: 10px;
       font-size: 0.85rem;
@@ -419,17 +535,17 @@
 
     /* Tarjeta QR visible de inmediato en PC */
     .qr-panel {
-      background: #ffffff;
-      border: 1px solid #bae6fd;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
       border-radius: 16px;
       padding: 1.25rem;
       text-align: center;
-      box-shadow: 0 6px 18px rgba(2, 132, 199, 0.08);
+      box-shadow: 0 6px 18px rgba(16, 185, 129, 0.1);
     }
 
     .qr-panel h3 {
       font-size: 1rem;
-      color: var(--primary-dark);
+      color: #065f46;
       margin-bottom: 0.25rem;
     }
 
@@ -463,7 +579,7 @@
 
     /* Footer */
     footer {
-      background: #0f172a;
+      background: #020617;
       color: #cbd5e1;
       text-align: center;
       padding: 2.5rem 1.5rem;
@@ -571,7 +687,7 @@
   </section>
 
   <!-- ADN Mecatrónico -->
-  <section id="adn" class="section-tint">
+  <section id="adn">
     <div class="container">
       <div class="section-header">
         <h2>El ADN Mecatrónico</h2>
@@ -613,13 +729,13 @@
         <div class="sede-info">
           <h3>ISFT "Islas Malvinas"</h3>
           <div class="sede-address">
-            <i data-lucide="map-pin" color="#0284c7"></i>
+            <i data-lucide="map-pin" color="#0891b2"></i>
             <span>Neuquén 1470 · Ciudad de Corrientes</span>
           </div>
           <p style="color: var(--text-muted); margin-bottom: 1.25rem; font-size: 0.95rem;">
             Contamos con talleres, equipamiento técnico y docentes especialistas para acompañarte en cada etapa de tu carrera.
           </p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Neuquen+1470+Corrientes+Capital" target="_blank" rel="noopener" style="color: var(--primary); font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem;">
+          <a href="https://www.google.com/maps/search/?api=1&query=Neuquen+1470+Corrientes+Capital" target="_blank" rel="noopener" style="color: #0891b2; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem;">
             <i data-lucide="external-link" size="16"></i> Ver ubicación en Google Maps
           </a>
         </div>
@@ -638,7 +754,7 @@
   </section>
 
   <!-- Campo Laboral -->
-  <section id="campo-laboral" class="section-tint">
+  <section id="campo-laboral">
     <div class="container">
       <div class="section-header">
         <h2>Tu futuro profesional</h2>
@@ -687,8 +803,22 @@
           <div class="inscripcion-main">
             <h2>Inscripción Ciclo Lectivo 2027</h2>
             <p>
-              Ingresá al sistema SIMA Educativo, buscá <strong>ISFT "Islas Malvinas"</strong> en Corrientes Capital y seleccioná la <strong>Tecnicatura Superior en Mecatrónica</strong>.
+              Completá tu preinscripción online en el portal oficial SIMA Educativo y luego acercate al instituto para confirmar tu vacante.
             </p>
+
+            <!-- Caja de alerta con pasos exactos para SIMA -->
+            <div class="sima-guide-box">
+              <h4>
+                <i data-lucide="alert-triangle" size="18"></i>
+                ¿Cómo seleccionarla en el sistema?
+              </h4>
+              <p><em>El portal no tiene enlace directo por carrera, seguí estos 3 pasos:</em></p>
+              <ol>
+                <li>Seleccioná la localidad: <strong>CORRIENTES</strong>.</li>
+                <li>Buscá el <strong>INSTITUTO DE FORMACIÓN TÉCNICA "ISLAS MALVINAS"</strong>.</li>
+                <li>Elegí <strong>TECNICATURA SUPERIOR EN MECATRÓNICA</strong> y tocá el botón verde <span class="badge-btn-green">Pre-inscribirme</span> para validar tu DNI y completar tus datos.</li>
+              </ol>
+            </div>
 
             <div class="steps-grid">
               <div class="step-card">
